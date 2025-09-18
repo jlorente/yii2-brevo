@@ -13,11 +13,15 @@ Features include dynamic template parameters, custom subjects, attachments, CC/B
 
 Add the package to your project:
 
-    composer require jlorente/yii2-brevo
+```bash
+$ composer require jlorente/yii2-brevo
+```
 
 Then configure the component in your Yii2 application (for example in `config/main.php` or `common/config/main.php`):
-
+```json
+...
     'components' => [
+        // ... other configurations ...
         'mailer' => [
             'class' => \jlorente\brevo\Mailer::class,
             'apiKey' => env('BREVO_API_KEY'),
@@ -34,22 +38,27 @@ Then configure the component in your Yii2 application (for example in `config/ma
             'viewPath' => '@app/mail',
         ],
     ],
+...
+```
 
 ---
 
 ## Basic Usage
 
+```php
     Yii::$app->mailer->compose()
         ->setTo('user@example.com')
         ->setSubject('Hello from Brevo')
         ->setHtmlBody('<h1>Hello</h1><p>HTML body</p>')
         ->setTextBody('Hello — plain text body')
         ->send();
+```
 
 ---
 
 ## Using Brevo Templates
 
+```php
     Yii::$app->mailer->compose()
         ->setTo('user@example.com')
         ->setTemplateId(123456)
@@ -58,6 +67,7 @@ Then configure the component in your Yii2 application (for example in `config/ma
             // other template parameters
         ])
         ->send();
+```
 
 ---
 
@@ -65,6 +75,7 @@ Then configure the component in your Yii2 application (for example in `config/ma
 
 Attach a file from disk:
 
+```php
     Yii::$app->mailer->compose()
         ->setTo('user@example.com')
         ->setSubject('Report attached')
@@ -74,9 +85,11 @@ Attach a file from disk:
             'contentType' => 'application/pdf',
         ])
         ->send();
+```
 
 Attach content from memory:
 
+```php
     $binary = file_get_contents('/path/generated.pdf');
     Yii::$app->mailer->compose()
         ->setTo('user@example.com')
@@ -87,6 +100,7 @@ Attach content from memory:
             'contentType' => 'application/pdf',
         ])
         ->send();
+```
 
 ---
 
