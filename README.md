@@ -1,7 +1,11 @@
 # Yii2 Brevo Mailer
 
-Yii2 mailer component for Brevo’s transactional REST API.  
-Send transactional emails with templates, attachments, default sender, and sandbox mode using the official Brevo PHP SDK.
+Yii2 mailer connector for [Brevo](https://www.brevo.com) (formerly Sendinblue).  
+Provides a seamless integration of the **official [brevo-php SDK](https://github.com/getbrevo/brevo-php)** into Yii2.
+
+This component lets you send either **full custom HTML emails** or **Brevo transactional templates**, and you can deliver them through **Brevo’s Transactional REST API** (via the official SDK) **or through Brevo’s SMTP relay**.
+
+Features include dynamic template parameters, custom subjects, attachments, CC/BCC, default sender configuration, and sandbox mode for safe testing.
 
 ---
 
