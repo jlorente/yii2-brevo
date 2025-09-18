@@ -11,14 +11,39 @@ Features include dynamic template parameters, custom subjects, attachments, CC/B
 
 ## Installation
 
-Add the package to your project:
+### Package installation
+
+To install, either run
 
 ```bash
-$ composer require jlorente/yii2-brevo
+$ php composer.phar require jlorente/yii2-brevo "*"
 ```
 
-Then configure the component in your Yii2 application (for example in `config/main.php` or `common/config/main.php`):
+or 
+
+```bash
+$ composer require jlorente/yii2-brevo "*"
+```
+
+or add
+
 ```json
+...
+    "require": {
+        // ... other configurations ...
+        "jlorente/yii2-brevo": "*"
+    }
+```
+
+to the ```require``` section of your `composer.json` file and run the following command from your project directory.
+```bash
+$ composer update
+```
+
+### Component configuration
+
+Then configure the component in your Yii2 application (for example in `config/main.php` or `common/config/main.php`):
+```php
 ...
     'components' => [
         // ... other configurations ...
