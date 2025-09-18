@@ -1,11 +1,11 @@
 <?php
-namespace custom\brevo\src;
+namespace jlorente\brevo;
 
+use Brevo\Client\Api\TransactionalEmailsApi;
+use Brevo\Client\Configuration;
+use GuzzleHttp\Client as GuzzleClient;
 use yii\mail\BaseMailer;
 use yii\mail\MessageInterface;
-use Brevo\Client\Configuration;
-use Brevo\Client\Api\TransactionalEmailsApi;
-use GuzzleHttp\Client as GuzzleClient;
 
 /**
  * Class Mailer

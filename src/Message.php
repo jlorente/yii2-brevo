@@ -1,9 +1,9 @@
 <?php
-namespace custom\brevo\src;
+namespace jlorente\brevo;
 
+use Brevo\Client\Model\SendSmtpEmail;
 use http\Exception\InvalidArgumentException;
 use yii\mail\BaseMessage;
-use Brevo\Client\Model\SendSmtpEmail;
 
 /**
  * Class Message
