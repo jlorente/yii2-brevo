@@ -18,8 +18,7 @@
   },
   "autoload": {
     "psr-4": {
-      "jlorente\\brevo\\": "brevo/"
+      "jlorente\\brevo\\": "src/"
     }
-  },
-  "extra": { "bootstrap": "Homedoctor\\Brevo\\Bootstrap" }
+  }
 }
